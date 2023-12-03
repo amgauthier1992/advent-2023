@@ -1,0 +1,11 @@
+https://stackoverflow.com/questions/44793523/how-to-edit-all-lines-in-visual-studio-code
+1. Edit and replace all plaintext data with a RegEx (Ctrl + F & Alt & R)
+   a. ^(.+)$
+   b. '$1', (wraps everything in quotation marks and appends a comma at the end of each line)
+
+2. Again using vscode hotkeys
+    1. Ctrl+A to select all or select your desired text. 
+    2. Shift+Alt+I to put a cursor at the end of each line. Type your ' (or whatever you want at the end). 
+    3. Home will move all your cursors to the beginning of the lines. Type your ' (or whatever you want at the beginning of all the lines).
+
+3. Or use fs.readFileSync(fileName, 'utf-8').trim().split('\n'); //converts data to array of strings, separated by new lines
