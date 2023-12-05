@@ -1,7 +1,7 @@
-import fs from 'fs';
+import { puzzleInputReader } from '../utils.js';
 
 function findCalibrationValues(file) {
-	const lines = fs.readFileSync(file, 'utf-8').trim().split('\n');
+	const lines = puzzleInputReader(file);
 
   	const values = lines.map((line) => {
 		let first = line.split('').find((value) => !Number.isNaN(Number(value)));
