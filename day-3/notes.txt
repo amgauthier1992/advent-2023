@@ -1,0 +1,7 @@
+1. Module Error
+
+When you are using ECMAScript modules you are forced to provide the file extension: https://nodejs.org/api/esm.html#esm_mandatory_file_extensions
+
+So, on top of what other suggested of using "type": "module" on package.json you also need to specify the file extension import {urls} from './helpers.js'. You can also use the flag  --es-module-specifier-resolution=node to make it resolve js files as modules just like it did before with require
+
+2. Important to be able to think of strings as being treated as arrays with indexes. Also, in the context of an array of strings, we can think of them in terms of multidimensional arrays i.e. lines[0][0] === first string line/first character of that individual string.
